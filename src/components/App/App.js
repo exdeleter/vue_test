@@ -3,6 +3,7 @@
 //initialise object - component
 import PostForm from "@/components/PostForm/PostForm.vue";
 import PostList from "@/components/PostList/PostList.vue";
+import axios from "axios";
 
 export default {
     components : {
@@ -12,29 +13,9 @@ export default {
     
     data() {
         return { 
-            posts : [
-                {
-                    id: 1,
-                    title : "C#",
-                    body: "good language"
-                },
-                {
-                    id: 2,
-                    title : "C++",
-                    body: "Sed ut perspiciatis, quis nostrum exercitationem"
-                },
-                {
-                    id: 3,
-                    title : "C",
-                    body: "ghic tenetur a sapiente delectus"
-                },
-                {
-                    id: 4,
-                    title : "Ckkss",
-                    body: "ghic tenetur a sapiente delectus"
-                },
-            ],
+            posts : [] ,
             dialogVisible: false,
+            isPostsLoading: false,
         }
     },
     methods : {
@@ -47,6 +28,22 @@ export default {
         },
         showDialog() {
             this.dialogVisible=true;
-        }
+        },
+        async fetchPosts() {
+            try {
+                this.isPostsLoading = true;
+                const response = await axios.get('https://jsonplaceholder.typicode.com/posts?_limit=10');
+                this.posts =response.data;
+                this.isPostsLoading=false;
+            } 
+            catch (e) {
+                alert("ошибка");
+            } finally {
+                this.isPostsLoading = false;
+            }
+        },
+    },
+    mounted() {
+        this.fetchPosts();
     }
 }
