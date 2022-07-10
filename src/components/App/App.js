@@ -34,15 +34,19 @@ export default {
                     body: "ghic tenetur a sapiente delectus"
                 },
             ],
+            dialogVisible: false,
         }
     },
     methods : {
         createPost(post) {
             this.posts.push(post);
+            this.dialogVisible = false;
         },
         removePost(post) {
             this.posts = this.posts.filter(p=> p.id !== post.id);
+        },
+        showDialog() {
+            this.dialogVisible=true;
         }
-        
     }
 }

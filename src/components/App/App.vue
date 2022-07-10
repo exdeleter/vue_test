@@ -4,9 +4,18 @@
 <!-- некоторая разметка -->
 <template>
   <div class="app">
-    <post-form
-        @create="createPost"
-    />
+    <h1>Страница с постами</h1>
+    <my-button 
+        @click="showDialog"
+        style="margin: 15px 0;"
+    >
+      Создать пост
+    </my-button>
+    <my-dialog-window v-model:show="dialogVisible" >
+      <post-form
+          @create="createPost"
+      />
+    </my-dialog-window>
     <post-list 
         :posts="posts"
         @remove="removePost"
