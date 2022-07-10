@@ -5,5 +5,7 @@
   <input
       class="input"
       type="text"
+      :value="modelValue"
+      @input="updateInput"
   >
 </template>

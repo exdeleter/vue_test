@@ -5,9 +5,11 @@
 <template>
   <div class="app">
     <post-form
-        @create="createPost"/>
+        @create="createPost"
+    />
     <post-list 
         :posts="posts"
+        @remove="removePost"
     />
   </div>
 </template>
