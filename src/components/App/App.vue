@@ -36,18 +36,24 @@
     >
       Идет загрузка...
     </div>
-    <div class="page__wrapper">
-      <div 
-          v-for="pageNumber in totalPages"
-          :key="pageNumber"
-          class="page"
-          :class="{
-            'current-page': page === pageNumber
-          }"
-          @click="changePage(pageNumber)"
-      >
-        {{ pageNumber }}
-      </div>
+    <div
+        ref="observer"
+        class="observer"
+    >
+      
     </div>
+<!--    <div class="page__wrapper">-->
+<!--      <div -->
+<!--          v-for="pageNumber in totalPages"-->
+<!--          :key="pageNumber"-->
+<!--          class="page"-->
+<!--          :class="{-->
+<!--            'current-page': page === pageNumber-->
+<!--          }"-->
+<!--          @click="changePage(pageNumber)"-->
+<!--      >-->
+<!--        {{ pageNumber }}-->
+<!--      </div>-->
+<!--    </div>-->
   </div>
 </template>

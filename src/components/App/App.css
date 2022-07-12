@@ -26,3 +26,8 @@
 .current-page {
     border: 3px solid teal;
 }
+
+.observer {
+    height: 30px;
+    background: green;
+}
