@@ -6,7 +6,7 @@
     <div>
       <div>
         <strong>
-          Название
+          {{post.id}} | Название
         </strong>
         {{post.title}}
       </div>
