@@ -5,23 +5,25 @@
 <template>
   <div class="app">
     <h1>Страница с постами</h1>
-    <my-button
-        @click="fetchPosts"
-    >Получить посты
-    </my-button>
-    <my-button 
-        @click="showDialog"
-        style="margin: 15px 0;"
-    >
-      Создать пост
-    </my-button>
+    <div class="app__btns">
+      <my-button
+          @click="showDialog"
+          
+      >
+        Создать пост
+      </my-button>
+      <my-select
+          v-model="selectedSort"
+          :options="sortOptions"
+      />
+    </div>
     <my-dialog-window v-model:show="dialogVisible" >
       <post-form
           @create="createPost"
       />
     </my-dialog-window>
     <post-list 
-        :posts="posts"
+        :posts="sortedPosts"
         @remove="removePost"
         v-if="!isPostsLoading"
     />
