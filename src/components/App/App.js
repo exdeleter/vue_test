@@ -17,6 +17,7 @@ export default {
             dialogVisible: false,
             isPostsLoading: false,
             selectedSort: '',
+            searchQuery: '',
             sortOptions: [
                 {value: 'title', name: 'По названию'},
                 {value: 'body', name: 'По содержимому'},
@@ -57,6 +58,13 @@ export default {
                 return post1[this.selectedSort]
                     ?.localeCompare(post2[this.selectedSort]);
             })
+        },
+        sortedSearchedPosts() {
+            return this.sortedPosts.filter(post => 
+                post.title
+                    .toLowerCase()
+                    .includes(this.searchQuery
+                        .toLowerCase()));
         }
     }
     // watch : {

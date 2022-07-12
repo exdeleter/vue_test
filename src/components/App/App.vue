@@ -5,6 +5,10 @@
 <template>
   <div class="app">
     <h1>Страница с постами</h1>
+    <my-input
+        placeholder="Введите то, что вас интересует"
+        v-model="searchQuery"
+    />
     <div class="app__btns">
       <my-button
           @click="showDialog"
@@ -23,7 +27,7 @@
       />
     </my-dialog-window>
     <post-list 
-        :posts="sortedPosts"
+        :posts="sortedSearchedPosts"
         @remove="removePost"
         v-if="!isPostsLoading"
     />
