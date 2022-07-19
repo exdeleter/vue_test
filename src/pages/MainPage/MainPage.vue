@@ -4,10 +4,16 @@
 <template>
   <div>
     <h1>
-      Всем привет
+      Социальная сеть PostBook
     </h1>
-    <router-link to="/about">О сайте</router-link>
-    <router-link to="/posts">Список постов</router-link>
+    <div>
+      <router-link to="/about">О сайте</router-link>
+    </div>
+    <div>
+      <router-link to="/posts">Список постов</router-link>
+    </div>
+    
+    
   </div>
 </template>
 

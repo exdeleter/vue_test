@@ -2,12 +2,12 @@
 import MyInput from "@/components/UI/MyInput/MyInput.vue";
 import MyDialogWindow from "@/components/UI/MyDialogWindow/MyDialogWindow.vue";
 import MySelect from "@/components/UI/MySelect/MySelect.vue";
-import Navbar from "@/components/UI/Navbar/Navbar.vue";
+import MyNavbar from "@/components/UI/MyNavbar/MyNavbar.vue";
 
 export default [
     MyButton,
     MyInput,
     MyDialogWindow,
     MySelect,
-    Navbar
+    MyNavbar
 ]

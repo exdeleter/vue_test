@@ -1,0 +1,28 @@
+﻿<script src="./MyNavbar.js" ></script>
+<style src="./MyNavbar.css" scoped></style>
+
+<template>
+    <div class="navbar">
+      <div @click="$router.push('/')">
+        PostBook
+      </div>
+      <div class="navbar__btns">
+        <ul>
+          <li class="navbar__btns_item">
+            <my-button
+                @click="$router.push('/posts')"
+            >Посты
+            </my-button>
+          </li>
+          <li class="navbar__btns_item">
+            <my-button
+                @click="$router.push('/about')"
+            >О сайте
+            </my-button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  
+</template>
+

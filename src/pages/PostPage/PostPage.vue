@@ -40,7 +40,6 @@
         ref="observer"
         class="observer"
     >
-
     </div>
     <!--    <div class="page__wrapper">-->
     <!--      <div -->

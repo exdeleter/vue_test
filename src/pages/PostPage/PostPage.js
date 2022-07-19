@@ -4,7 +4,7 @@
 import PostForm from "@/components/PostForm/PostForm.vue";
 import PostList from "@/components/PostList/PostList.vue";
 import axios from "axios";
-
+/* eslint-disable */
 export default {
     components : {
         PostForm,
@@ -84,12 +84,12 @@ export default {
             threshold: 1.0
         }
         //arrow function dont lose context
-        const callback = (entries, observer)  => {
-            if(entries[0].isIntersecting && this.page < this.totalPages) {
-                this.loadMorePosts()
-            }
-        };
-        const observer = new IntersectionObserver(callback, options);
+        const observer = new IntersectionObserver(
+            (entries, observer)  => {
+                if(entries[0].isIntersecting && this.page < this.totalPages) {
+                    this.loadMorePosts()
+                }
+                }, options);
         observer.observe(this.$refs.observer)
     },
     computed : {

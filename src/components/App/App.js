@@ -1,7 +1,7 @@
-﻿import Navbar from "@/components/UI/Navbar/Navbar.vue";
+﻿import MyNavbar from "@/components/UI/MyNavbar/MyNavbar.vue";
 
 export default {
     components : {
-        Navbar
+        MyNavbar
     }
 }
