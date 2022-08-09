@@ -9,15 +9,27 @@
       <div class="navbar__btns">
         <ul>
           <li class="navbar__btns_item">
-            <my-button
+            <my-button style="width: 100%"
                 @click="$router.push('/posts')"
             >Посты
             </my-button>
           </li>
           <li class="navbar__btns_item">
-            <my-button
+            <my-button style="width: 100%"
                 @click="$router.push('/about')"
             >О сайте
+            </my-button>
+          </li>
+          <li class="navbar__btns_item">
+            <my-button style="width: 100%"
+                @click="$router.push('/department')"
+            >Департаменты
+            </my-button>
+          </li>
+          <li class="navbar__btns_item">
+            <my-button style="width: 100%"
+                       @click="$router.push('/employee')"
+            >Сотрудники
             </my-button>
           </li>
         </ul>

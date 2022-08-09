@@ -1,6 +1,6 @@
 ﻿.navbar {
     height: 100%;
-    weight: 100px;
+    weight: 120px;
     background-color: lightgray;
     box-shadow: 2px 2px 4px gray;
     position: fixed;
@@ -14,8 +14,7 @@
 }
 
 .navbar__btns_item  {
-    list-style-type: none;
-    box-shadow: 2px 2px 4px gray;
+    width: 100%;
     margin-top: 20px;
     margin-left: -6px;
     margin-bottom: 10px;
