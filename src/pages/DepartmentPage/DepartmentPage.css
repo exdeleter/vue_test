@@ -1,0 +1,14 @@
+.my-table {
+    border-collapse: collapse;
+    background-color: #a8c5e7;
+    width: 100%;
+}
+
+.my-td {
+    border: 1px solid green;
+    text-align: center;
+}
+
+.my-div-table {
+    margin: 20px;
+}
